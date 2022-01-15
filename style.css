@@ -29,8 +29,6 @@ hr {
   font-size: 52px;
 }
 .top-left {
-  height: 270px;
-  width: 582px;
   margin-left: 120px;
 }
 .button-style {
@@ -49,8 +47,8 @@ a {
   display: flex;
 }
 .top-right {
-  margin-left: 350px;
-  margin-top: 50px;
+  width: 100%;
+  flex-direction: column;
 }
 .camera-image img:hover {
   transform: scale(1.5);
@@ -78,7 +76,6 @@ a {
   justify-content: center;
   grid-template-columns: 329px 329px 329px;
   grid-gap: 2em;
-  height: 1662px;
 }
 #popular-title {
   margin-top: 60px;
@@ -141,12 +138,31 @@ a {
 
 /* Media Queries 
 ----------------*/
+
+/*----------------- 
+Mobile devices
+----------------- */
 @media only screen and (max-width: 688px) {
-  .container {
+  .top-portion {
     width: 100%;
+    flex-direction: column;
   }
-  .collections,
-  .see-more {
-    grid-template-columns: repeat(1, 1fr);
+  .camera-image {
+    flex-direction: column;
+  }
+  .company-logos {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+ .collections {
+   grid-template-columns: none;
+ }
+ .see-more {
+   margin-top: 50px;
+   margin-right: 0px;
+ }
+  }
+  .social-media {
+    
   }
 }
