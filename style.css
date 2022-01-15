@@ -8,46 +8,145 @@ body {
 }
 /* main {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-} */
+  /* justify-content: center;
+  flex-direction: column; */
+/* align-items: center; */
 
-/* Top Portion */
-.title-position {
+header {
   margin-left: 120px;
-  margin-bottom: 140px;
 }
+hr {
+  border: 1px solid #d1d1d1;
+  margin-bottom: 27px;
+}
+
+/* Top Portions */
+
 .starting-title {
   font-size: 24px;
 }
-.starting-details {
-  width: 582px;
-  height: 270px;
-  margin-left: 120px;
-  margin-right: 133px;
-  /* padding: 30px; */
-}
 .section-title {
   font-size: 52px;
-  font-weight: 700;
+}
+.top-left {
+  height: 270px;
+  width: 582px;
+  margin-left: 120px;
 }
 .button-style {
-  text-decoration: none;
   background-color: #e02c6d;
   padding: 10px 24px;
   font-weight: 700;
   border-radius: 10px;
+  color: white;
+  text-decoration: none;
 }
 a {
   color: white;
   text-decoration: none;
 }
-.container {
+.top-portion {
   display: flex;
 }
-.camera-image {
-  height: 440px;
-  width: 414px;
-  border-: 20px;
+.top-right {
+  margin-left: 350px;
+  margin-top: 50px;
+}
+.camera-image img:hover {
+  transform: scale(1.5);
+  transition: transform 2.5s ease-in-out;
+}
+
+/* Logos Style */
+.companies {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.company-logos {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  margin-left: 50px;
+}
+
+/* Popular Collection 
+---------------------*/
+
+.collections {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 329px 329px 329px;
+  grid-gap: 2em;
+  height: 1662px;
+}
+#popular-title {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 28px;
+}
+.item-image {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fa-star.filled {
+  color: #ffc014;
+}
+.fa-star-half.filled {
+  color: #ffc014;
+}
+
+.item {
+  background-color: white;
+  border-radius: 10px;
+}
+.item-details {
+  margin-left: 20px;
+}
+.item-title {
+  font-size: 28px;
+}
+.price {
+  font-size: 22px;
+}
+.item-info {
+  font-size: 12px;
+}
+
+.see-more {
+  display: flex;
+  justify-content: right;
+  margin-top: 100px;
+  margin-right: 420px;
+}
+#see-button {
+  color: #e02c6d;
+  font-size: 16px;
+}
+
+/* Footer styles */
+.social-media {
+  background-color: rgb(10, 10, 46);
+  color: white;
+  text-align: center;
+}
+.social-sites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Media Queries 
+----------------*/
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 100%;
+  }
+  .collections,
+  .see-more {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
