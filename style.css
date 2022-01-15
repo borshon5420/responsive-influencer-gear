@@ -12,7 +12,7 @@ header {
 }
 hr {
   border: 1px solid #d1d1d1;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 
 /* Top Portions */
@@ -24,11 +24,11 @@ hr {
   font-size: 52px;
 }
 .half-width {
-  padding: 5%;
+  margin-left: 120px;
   width: 50%;
 }
 .half-width img {
-  width: 85%;
+  width: 80%;
 }
 
 .button-style {
@@ -45,9 +45,7 @@ a {
 .top-portion {
   display: flex;
 }
-.top-right {
-  width: 100%;
-}
+
 .half-width img:hover {
   transform: scale(1.5);
   transition: transform 2.5s ease-in-out;
@@ -126,6 +124,7 @@ a {
   background-color: rgb(10, 10, 46);
   color: white;
   text-align: center;
+  margin: 0;
 }
 .social-sites {
   display: flex;
@@ -145,6 +144,7 @@ a {
 .colored {
   color: #e02c6d;
 }
+
 /* Media Queries 
 ----------------*/
 
@@ -155,16 +155,47 @@ Mobile devices
   .top-portion {
     width: 100%;
     flex-direction: column;
+    align-content: center;
   }
-  .camera-image {
+  .half-width {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .company-logos {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .collections {
+    grid-template-columns: none;
+    width: 100%;
+  }
+  .see-more {
+    width: 100%;
+    margin-top: 50px;
+    margin-right: 0px;
+  }
+  .extra {
+    width: 100%;
     flex-direction: column;
   }
+  .social-media {
+    width: 100%;
+  }
+}
+
+/*----------------- 
+Tablet devices
+----------------- */
+@media only screen and (min-width: 688px) and (max-width: 1180px) {
   .company-logos {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
   .collections {
-    grid-template-columns: none;
+    grid-template-columns: repeat(2, 1fr);
   }
   .see-more {
     margin-top: 50px;
